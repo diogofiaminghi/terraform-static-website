@@ -40,7 +40,9 @@
 
 ## Description
 
-This project provisions a VPC and an EC2 instance on AWS through Terraform. In this project, the terraform.tfstate file is stored remotely in an S3 bucket. In addition, we have the creation of a Subnet, AWS Internet Gateway, Route Table and AWS Security Group. Finally, an EC2 instance is created within the Subnet. All resources will be created in the us-east-1 region.
+This project aims to provision a static website using the AWS S3 service and Terraform as a structure-as-code tool. Project characteristics:
+- random bucket name creation
+- creation of bucket, ACL, website configuration, bucket policy and two objects (index.html and erro.html)
 
 ---
 
@@ -58,23 +60,7 @@ In addition, it is good to have an editor to work with the code like [VSCode] (h
 1 - Clone this repository.
 
 ```bash
-git clone git@github.com:diogofiaminghi/terraform-project-01.git
-```
-
-2 - Create an S3 bucket on AWS manually.
-
-3 - Open de Project Folder in VSCode
-
-4 - Edit the main.tf file. On line 13, paste the name of your S3 bucket.
-
-```bash
-bucket = "your-S3-bucket-name-here"
-```
-
-5 - Open a new bash terminal in VSCode. Create an SSH key pair named 'aws-key'.
-
-```bash
-ssh-keygen
+git clone git@github.com:diogofiaminghi/terraform-static-website.git
 ```
 
 6 - You must now configure your AWS Access Keys using the bash terminal.
@@ -86,7 +72,7 @@ export AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXX
 export AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-7 - Terraform Commands in Project Folder
+7 - Terraform Commands in terraform folder
 ```bash
 terraform init
 ```
@@ -107,14 +93,8 @@ terraform plan -out=plan.out
 terraform apply plan.out
 ```
 
-8 - Now, to prove that everything worked, get the 'vm_ip' in 'output' and let's connect via ssh to the newly created instance.
+8 - Now, to prove that everything worked, get the 'url' in 'output' and open it in your web browser.
 
-```bash
-ssh -i aws-key ubuntu@the-public-ip-here
-```
-```bash
-exit
-```
 
 9 - Do not forget to destroy the provisioned structure otherwise you will be able to receive invoices.
 ```bash
@@ -147,7 +127,7 @@ The following tools were used in the construction of the project:
 
 ## License
 
-This project is under the license [MIT](https://github.com/diogofiaminghi/terraform-project-01/blob/704db28f58bfcf11bfafb5655f7ee122cdc854cd/LICENCE).
+This project is under the license [MIT](https://github.com/diogofiaminghi/terraform-static-website/blob/6dbdf154314091a8132e7c6d23939715503c0450/LICENSE).
 
 Made with love by Diogo Fiaminghi 👋🏽 [Get in Touch!](Https://www.linkedin.com/in/diogofiaminghi/)
 
