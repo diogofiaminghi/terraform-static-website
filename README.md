@@ -42,7 +42,7 @@
 
 This project aims to provision a static website using the AWS S3 service and Terraform as a structure-as-code tool. Project characteristics:
 - random bucket name creation
-- creation of bucket, ACL, website configuration, bucket policy and two objects (index.html and erro.html)
+- creation of bucket, ACL, website configuration, bucket policy and two objects (index.html and error.html)
 
 ---
 
