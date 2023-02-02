@@ -63,7 +63,7 @@ In addition, it is good to have an editor to work with the code like [VSCode] (h
 git clone git@github.com:diogofiaminghi/terraform-static-website.git
 ```
 
-6 - You must now configure your AWS Access Keys using the bash terminal.
+2 - You must now configure your AWS Access Keys using the bash terminal.
 
 ```bash
 export AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXX
@@ -72,7 +72,7 @@ export AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXX
 export AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-7 - Terraform Commands in terraform folder
+3 - Terraform Commands in terraform folder
 ```bash
 terraform init
 ```
@@ -93,10 +93,10 @@ terraform plan -out=plan.out
 terraform apply plan.out
 ```
 
-8 - Now, to prove that everything worked, get the 'url' in 'output' and open it in your web browser.
+4 - Now, to prove that everything worked, get the 'url' in 'output' and open it in your web browser.
 
 
-9 - Do not forget to destroy the provisioned structure otherwise you will be able to receive invoices.
+5 - Do not forget to destroy the provisioned structure otherwise you will be able to receive invoices.
 ```bash
 terraform destroy
 ```
